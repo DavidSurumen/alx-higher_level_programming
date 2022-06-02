@@ -4,4 +4,4 @@ def uppercase(str):
         if ord(str[i]) < 97:
             print(str[i], end="" if i+1 < len(str) else "\n")
         else:
-            print(chr(ord(str[i]) - 32), end="" if i+1 < len(str) else "\n")
+            print("{}".format(chr(ord(str[i]) - 32)), end="" if i+1 < len(str) else "\n")
