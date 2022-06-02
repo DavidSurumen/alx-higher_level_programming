@@ -3,6 +3,9 @@
 for i in range(10):
     for x in range(10):
         if i < x:
-            print("{}{}".format(i, x), end=" " if int(str(i+1) + str(x)) <= 89 else "\n")
+            if int(str(i) + str(x)) < 89:
+                print("{}{}".format(i, x), end=", ")
+            else:
+                print("{}{}".format(i, x), end="\n")
         else:
             continue
