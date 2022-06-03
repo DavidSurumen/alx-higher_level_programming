@@ -3,7 +3,7 @@ if __name__ == "__main__":
     from sys import argv
     from calculator_1 import add, sub, div, mul
 
-    if len(argv)-1 != 3:
+    if len(argv) != 4:
         print("Usage: {} <a> <operator> <b>".format(argv[0]))
         exit(1)
 
@@ -12,17 +12,17 @@ if __name__ == "__main__":
         print("Unkown operator. Available operators: +, -, *, and /")
         exit(1)
 
-    argv1 = int(argv[1])
-    argv3 = int(argv[3])
+    num1 = int(argv[1])
+    num2 = int(argv[3])
 
     if argv[2] == '+':
-        print("{} + {} = {}".format(argv1, argv3, add(argv1, argv3)))
+        print("{} + {} = {}".format(num1, num2, add(num1, num2)))
 
     elif argv[2] == '-':
-        print("{} - {} = {}".format(argv1, argv3, sub(argv1, argv3)))
+        print("{} - {} = {}".format(num1, num2, sub(num1, num2)))
 
     elif argv[2] == '*':
-        print("{} * {} = {}".format(argv1, argv3, mul(argv1, argv3)))
-    
+        print("{} * {} = {}".format(num1, num2, mul(num1, num2)))
+
     else:
-        print("{} / {} = {}".format(argv1, argv3, div(argv1, argv3)))
+        print("{} / {} = {}".format(num1, num2, div(num1, num2)))
