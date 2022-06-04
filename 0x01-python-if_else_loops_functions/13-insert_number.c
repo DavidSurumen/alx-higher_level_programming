@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * insert_node - inserts node to a sorted list
@@ -11,7 +12,6 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *current;
-	listint_t *tmp;
 	listint_t *new;
 
 	new = malloc(sizeof(listint_t));
@@ -21,27 +21,35 @@ listint_t *insert_node(listint_t **head, int number)
 	new->n = number;
 	new->next = NULL;
 
-	current = *head;
+	if (*head == NULL)
+		*head = new;
 
-	while (current)
+	else if ((*head)->n > number)
 	{
-		if (current->n >= number)
+		new->next = *head;
+		*head = new;
+	}
+	else
+	{
+		current = *head;
+		while (current)
 		{
-			new->next = current;
-			current = new;
-			break;
-		}
-		else if (!current->next)
-			current->next = new;
+			if (current->n == number)
+				break;
+			if (current->next == NULL && number != '\0')
+			{
+				current->next = new;
+				break;
+			}
 
-		else if (current->next && current->next->n < number)
+			if (current->next->n > number)
+			{
+				new->next = current->next;
+				current->next = new;
+				break;
+			}
+
 			current = current->next;
-		else
-		{
-			tmp = current->next;
-			current->next = new;
-			new->next = tmp;
-			break;
 		}
 	}
 	return (new);
