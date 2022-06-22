@@ -34,9 +34,9 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Defines the singly linked list
+    """
     def __init__(self):
-        """Defines the singly linked list
-        """
         self.__head = None
 
     def sorted_insert(self, value):
