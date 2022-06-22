@@ -1,52 +1,62 @@
 #!/usr/bin/python3
 """
-Defines a Square class
-It implements value/type validation for its attributes
+Create a Class Square with:
+- size, position private propreties
+- method of area and method of print_square
+- getters & setters.
 """
 
 
 class Square:
-    """
-    Square implementation
-    """
+    """Class - Square"""
+
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        """Constructor of a Square with the size and position"""
+        self.size = size
+        self.position = position
+
+    def area(self):
+        """Method to get the area of the Square"""
+        return (self.__size ** 2)
+
+    def my_print(self):
+        """Method to print a Square with spaces"""
+        if (self.__size == 0):
+            print()
+        else:
+            for blank in range(self.position[1]):
+                print()
+            for rows in range(self.__size):
+                print(" " * self.position[0], end='')
+                print("#" * self.__size)
 
     @property
     def size(self):
-        return self.__size
+        """Getter of the private attribute size"""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
-        if type(value) != int:
-            raise TypeError('size must be an integer')
-        elif value < 0:
-            raise ValueError('size must be >= 0')
-        self.__size = value
-
-    def area(self):
-        return self.__size ** 2
+        """Setter for the size private attribute"""
+        if (type(value) is not int):
+            raise (TypeError("size must be an integer"))
+        elif (value < 0):
+            raise (ValueError("size must be >= 0"))
+        else:
+            self.__size = value
 
     @property
     def position(self):
-        return self.__position
+        """Getter of Position"""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
-        if type(value) != tuple or len(position) != 2 \
-                or not all(isinstance(elem, int) for elem in position) \
-                or not all(elem > 0 for elem in position):
-            raise TypeError('position must be a tuple of 2 positive integers')
-
-        self.__position = position
-
-    def my_print(self):
-        if self.__size == 0:
-            print()
+        """Setter of position"""
+        if (len(value) != 2) or (type(value) is not tuple) \
+                or (type(value[0]) is not int) \
+                or (type(value[1]) is not int) \
+                or (value[0] < 0) or (value[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            for i in range(self.__position[1]):
-                print()
-
-            for x in range(self.__size):
-                print(' ' * self.__position[0] + '#' * self.__size)
+            self.__position = value
