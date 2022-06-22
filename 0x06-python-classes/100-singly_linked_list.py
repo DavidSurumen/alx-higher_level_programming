@@ -5,9 +5,9 @@ This module defines a Singly linked list
 
 
 class Node:
+    """Defines a node for a singly linked list
+    """
     def __init__(self, data, next_node=None):
-        """Defines a node for a singly linked list
-        """
         self.data = data
         self.next_node = next_node
 
