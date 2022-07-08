@@ -18,8 +18,12 @@ def print_square(size):
     Returns:
         nothing
     """
+    if size == "":
+        raise ValueError('size is required')
+
     if type(size) is not int:
         raise TypeError('size must be an integer')
+
     if size < 0:
         raise ValueError('size must be >= 0')
 
