@@ -95,3 +95,9 @@ matrix that contains non-numbers:
 	Traceback (most recent call last):
 		...
 	TypeError: div must be a number
+
+
+	>>> matrix_divided(0)
+	Traceback (most recent call last):
+		...
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
