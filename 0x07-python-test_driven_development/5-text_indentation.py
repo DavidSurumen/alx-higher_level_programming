@@ -22,16 +22,16 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError('text must be a string')
 
-    new_text = ""
+    delims = ['.', '?', ':']
     flag = False
 
-    for index, char in  enumerate(text):
-        if flag == False:
-            new_text += char
-        else:
+    for c in text:
+        if c.isspace() and flag == False:
+            continue
+        elif c in delims:
+            print("{}\n\n".format(c), end="")
             flag = False
-        if char == '.' or char == '?' or char == ':':
-            new_text += '\n\n'
+            continue
+        else:
+            print("{}".format(c), end="")
             flag = True
-
-    print(new_text)
