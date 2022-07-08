@@ -26,7 +26,7 @@ def text_indentation(text):
     flag = False
 
     for c in text:
-        if c.isspace() and flag == False:
+        if c.isspace() and flag is False:
             continue
         elif c in delims:
             print("{}\n\n".format(c), end="")
