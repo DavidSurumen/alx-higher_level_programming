@@ -88,3 +88,10 @@ matrix that contains non-numbers:
 	Traceback (most recent call last):
 		...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+	>>> matrix = [[5, 6, 8], [1, 0, 9]]
+	>>> matrix_divided(matrix, "alx")
+	Traceback (most recent call last):
+		...
+	TypeError: div must be a number
