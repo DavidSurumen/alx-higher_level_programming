@@ -77,7 +77,6 @@ TypeError: text must be a string
 
 
 
-
 >>> text_indentation(('string?', 'yeah.'))
 Traceback (most recent call last):
 	...
@@ -89,3 +88,13 @@ TypeError: text must be a string
 Traceback (most recent call last):
 	...
 TypeError: text must be a string
+
+
+
+Empty string
+===========
+
+>>> text_indentation("")
+Traceback (most recent call last):
+	...
+ValueError: text is required
