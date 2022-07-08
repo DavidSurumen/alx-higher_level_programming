@@ -22,6 +22,9 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError('text must be a string')
 
+    if text == "":
+        raise ValueError('text is required')
+
     delims = ['.', '?', ':']
     flag = False
 
