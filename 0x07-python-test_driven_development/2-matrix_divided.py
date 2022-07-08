@@ -33,12 +33,15 @@ def matrix_divided(matrix, div):
             raise TypeError('Each row of the matrix must have the same size')
 
         if not isinstance(line, list):
-            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+            raise TypeError(
+                'matrix must be a matrix (list of lists) of integers/floats'
+            )
 
         for index, elem in enumerate(line):
             if not isinstance(elem, (int, float)):
                 raise TypeError(
-                        'matrix must be a matrix (list of lists) of integers/floats'
+                    'matrix must be a matrix (list of lists)'
+                    'of integers/floats'
                         )
             line[index] = round(elem/div, 2)
     return new_matrix
