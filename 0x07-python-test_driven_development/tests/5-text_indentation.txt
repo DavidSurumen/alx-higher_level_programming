@@ -98,3 +98,13 @@ Empty string
 Traceback (most recent call last):
 	...
 ValueError: text is required
+
+
+
+Nothing provided
+================
+
+>>> text_indentation()
+Traceback (most recent call last):
+	...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
