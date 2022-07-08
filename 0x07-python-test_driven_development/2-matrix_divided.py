@@ -44,14 +44,9 @@ def matrix_divided(matrix, div):
         if len(i) == 0:
             raise TypeError(matrix_error)
 
-    new_matrix = [x[:] for x in matrix]
-
-    for line in new_matrix:
-        if len(line) != len(new_matrix[0]):
+    for line in matrix:
+        if len(line) != len(matrix[0]):
             raise TypeError('Each row of the matrix must have the same size')
 
-        for index, elem in enumerate(line):
-            if not isinstance(elem, (int, float)):
-                raise TypeError(matrix_error)
-            line[index] = round(elem/div, 2)
-    return new_matrix
+    return list(map(lambda row: list(map(lambda v:
+                                         round(v/div, 2), row)), matrix))
