@@ -10,8 +10,8 @@ Now use it.
 	>>> say_my_name("Ursula", "Corbero")
 	My name is Ursula Corbero
 
-	>>> say_my_name("Tasha") #doctest: +NORMALIZE_WHITESPACE
-	My name is Tasha
+	>>> say_my_name("Tasha")
+	My name is Tasha 
 
 	>>> say_my_name(2)
 	Traceback (most recent call last):
@@ -22,3 +22,21 @@ Now use it.
 	Traceback (most recent call last):
 		...
 	TypeError: last_name must be a string
+
+
+	>>> say_my_name(["Jonte"], "Mayian")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+
+	>>> say_my_name("", "Steve")
+	Traceback (most recent call last):
+		...
+	ValueError: first_name is required
+
+
+	>>> say_my_name(None, "Papa")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
