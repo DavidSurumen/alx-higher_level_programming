@@ -1,1 +1,91 @@
+================================
+How to Use 5-text_indentation.py
+================================
 
+This module contains only one function
+
+``text_indentation(text)``
+
+Takes one argument:
+	text (string)
+
+It prints back the text, with 2 new lines after every encounter of '.', '?, and ':'
+Import the function:
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Input cases:
+Strings
+=======
+
+>>> text_indentation('abc.def')
+abc.
+<BLANKLINE>
+def
+
+
+>>> text_indentation('abc.     def')
+abc.
+<BLANKLINE>
+def
+
+
+>>> text_indentation('abc      .       def.')
+abc      .
+<BLANKLINE>
+def.
+<BLANKLINE>
+
+>>> text_indentation('abc..def')
+abc.
+<BLANKLINE>
+.
+<BLANKLINE>
+def
+
+
+
+>>> text_indentation('abc?	def.')
+abc?
+<BLANKLINE>
+def.
+<BLANKLINE>
+
+
+Non-strings
+===========
+
+>>> text_indentation(10)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+
+
+>>> text_indentation(["hello:world"])
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+
+
+>>> text_indentation({34:"woow", 89:"this? is a joke"})
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+
+
+
+>>> text_indentation(('string?', 'yeah.'))
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
