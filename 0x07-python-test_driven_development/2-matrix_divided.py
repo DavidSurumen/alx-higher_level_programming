@@ -37,7 +37,7 @@ def matrix_divided(matrix, div):
     if not all(isinstance(el, (int, float)) for row in matrix for el in row):
         raise TypeError(matrix_error)
 
-    if  len(matrix) == 0:
+    if len(matrix) == 0:
         raise TypeError(matrix_error)
 
     for i in matrix:
