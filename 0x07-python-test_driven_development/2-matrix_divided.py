@@ -41,7 +41,7 @@ def matrix_divided(matrix, div):
             if not isinstance(elem, (int, float)):
                 raise TypeError(
                     'matrix must be a matrix (list of lists)'
-                    'of integers/floats'
+                    ' of integers/floats'
                         )
             line[index] = round(elem/div, 2)
     return new_matrix
