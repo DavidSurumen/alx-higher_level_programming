@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""Module 101-locked_class
+defines a class 'LockedClass'
+"""
+
+
 class LockedClass(object):
-    def __setattr__(self, key, val):
-        if key != "first_name":
-            raise AttributeError(
-                     "'LockedClass' object has no attribute %r" % key)
-        object.__setattr__(self, key, val)
+    """
+    Class that can only have one attribute, 'first_name'
+    """
+    __slots__ = ['first_name']
