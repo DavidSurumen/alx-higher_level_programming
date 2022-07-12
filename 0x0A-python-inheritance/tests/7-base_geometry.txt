@@ -69,7 +69,7 @@ Boolean type
 	TypeError: height must be an integer
 
 
-Array as value
+List as value
 ::
 	>>> bclass.integer_validator("age", [7, 3, 1])
 	Traceback (most recent call last):
@@ -92,6 +92,13 @@ Dictionary as value
 		...
 	TypeError: name must be an integer
 
+
+Set as value
+::
+	>>> bclass.integer_validator("month", {1.0, "July", (1, 2, 3)})
+	Traceback (most recent call last):
+		...
+	TypeError: month must be an integer
 
 None type.
 ::
