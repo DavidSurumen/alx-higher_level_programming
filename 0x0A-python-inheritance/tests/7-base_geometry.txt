@@ -21,23 +21,17 @@ Create an Object of the class:
 Test Cases:
 ===========
 
-Positive Integer numbers.
+Positive Integer
 ::
 	>>> bclass.integer_validator("name", 10)
+	>>>
 
-	>>> bclass.integer_validator("name", 1)
-
-Float numbers.
+Float numbers
 ::
 	>>> bclass.integer_validator("name", 1.4)
 	Traceback (most recent call last):
 		...
 	TypeError: name must be an integer
-
-	>>> bclass.integer_validator("my_int", 5.9)
-	Traceback (most recent call last):
-		...
-	TypeError: my_int must be an integer
 
 Zero.
 ::
@@ -47,19 +41,33 @@ Zero.
 	ValueError: something must be greater than 0
 
 
-Negative Integer numbers.
+Negative Integer
 ::
 	>>> bclass.integer_validator("num", -7)
 	Traceback (most recent call last):
 		...
 	ValueError: num must be greater than 0
 
-String type.
+String type
 ::
 	>>> bclass.integer_validator("valid", "dator")
 	Traceback (most recent call last):
 		...
 	TypeError: valid must be an integer
+
+	>>> bclass.integer_validator("name", "")
+	Traceback (most recent call last):
+		...
+	TypeError: name must be an integer
+
+
+Boolean type
+::
+	>>> bclass.integer_validator("height", True)
+	Traceback (most recent call last):
+		...
+	TypeError: height must be an integer
+
 
 None type.
 ::
