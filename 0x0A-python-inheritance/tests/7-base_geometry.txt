@@ -69,6 +69,30 @@ Boolean type
 	TypeError: height must be an integer
 
 
+Array as value
+::
+	>>> bclass.integer_validator("age", [7, 3, 1])
+	Traceback (most recent call last):
+		...
+	TypeError: age must be an integer
+
+
+Tuple as value
+::
+	>>> bclass.integer_validator("year", (2, 9, 0))
+	Traceback (most recent call last):
+		...
+	TypeError: year must be an integer
+
+
+Dictionary as value
+::
+	>>> bclass.integer_validator("name", {"Jan":24, "Jun": 25})
+	Traceback (most recent call last):
+		...
+	TypeError: name must be an integer
+
+
 None type.
 ::
 	>>> bclass.integer_validator("my_int", None)
@@ -89,3 +113,17 @@ No arguments.
 	Traceback (most recent call last):
 		...
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+
+Case: calling area function
+::
+	>>> bclass.area()
+	Traceback (most recent call last):
+		...
+	Exception: area() is not implemented
+
+
+Catched exceptions
+==================
+
