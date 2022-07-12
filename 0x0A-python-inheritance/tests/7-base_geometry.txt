@@ -122,15 +122,9 @@ No arguments.
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 
-
 Case: calling area function
 ::
 	>>> bclass.area()
 	Traceback (most recent call last):
 		...
 	Exception: area() is not implemented
-
-
-Catched exceptions
-==================
-
