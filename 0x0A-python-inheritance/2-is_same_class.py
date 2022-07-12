@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Module '2-is_same_class' defines one
 function: 'is_same_class'
