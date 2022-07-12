@@ -1,0 +1,53 @@
+The '1-my_list' Module
+======================
+
+How to use the module:
+
+This module defines a single class 'MyClass', which contains a method 'print_sorted'
+that sorts out a list in ascending order.
+
+First import it
+::
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+
+Test different scenarios:
+
+Integer list
+============
+::
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(8)
+	>>> my_list.append(5)
+	>>> my_list.print_sorted()
+	[2, 4, 5, 8]
+
+Negative Integers
+=================
+::
+	>>> my_list = MyList()
+	>>> my_list.append(-8)
+	>>> my_list.append(-1)
+	>>> my_list.append(-4)
+	>>> my_list.append(-12)
+	>>> my_list.print_sorted()
+	[-12, -8, -4, -1]
+
+Floats
+=====
+::
+	>>> mlist = MyList()
+	>>> mlist.append(0.5)
+	>>> mlist.append(4.4)
+	>>> mlist.append(0.6)
+	>>> mlist.append(3.3)
+	>>> mlist.print_sorted()
+	[0.5, 0.6, 3.3, 4.4]
+
+Empty
+=====
+::
+	>>> mlist = MyList()
+	>>> mlist.print_sorted()
+	[]
