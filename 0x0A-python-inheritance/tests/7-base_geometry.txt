@@ -1,0 +1,83 @@
+===================================
+How to Use Module '7-base_geometry'
+===================================
+
+This Module contains a single class ``BaseGeometry``, which defines
+a method ``integer_validator(self, name, value)``.
+This method validates `value`.
+
+Import the class:
+==================
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Create an Object of the class:
+==============================
+
+>>> bclass = BaseGeometry()
+
+
+Test Cases:
+===========
+
+Positive Integer numbers.
+::
+	>>> bclass.integer_validator("name", 10)
+
+	>>> bclass.integer_validator("name", 1)
+
+Float numbers.
+::
+	>>> bclass.integer_validator("name", 1.4)
+	Traceback (most recent call last):
+		...
+	TypeError: name must be an integer
+
+	>>> bclass.integer_validator("my_int", 5.9)
+	Traceback (most recent call last):
+		...
+	TypeError: my_int must be an integer
+
+Zero.
+::
+	>>> bclass.integer_validator("something", 0)
+	Traceback (most recent call last):
+		...
+	ValueError: something must be greater than 0
+
+
+Negative Integer numbers.
+::
+	>>> bclass.integer_validator("num", -7)
+	Traceback (most recent call last):
+		...
+	ValueError: num must be greater than 0
+
+String type.
+::
+	>>> bclass.integer_validator("valid", "dator")
+	Traceback (most recent call last):
+		...
+	TypeError: valid must be an integer
+
+None type.
+::
+	>>> bclass.integer_validator("my_int", None)
+	Traceback (most recent call last):
+		...
+	TypeError: my_int must be an integer
+
+
+No arguments.
+::
+	>>> bclass.integer_validator("name")
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+	>>> bclass.integer_validator()
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
