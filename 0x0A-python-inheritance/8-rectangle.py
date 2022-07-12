@@ -7,7 +7,8 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Extends BaseGeometry class, and provides additional attributes of its own
+    """Extends BaseGeometry class, and provides
+    additional private attributes of its own
     """
     def __init__(self, width, height):
         """Instatiates private instance attributes of the class
