@@ -51,3 +51,27 @@ Empty
 	>>> mlist = MyList()
 	>>> mlist.print_sorted()
 	[]
+
+
+Non-numbers
+===========
+::
+	>>> mlist = MyList()
+	>>> mlist.append(-1)
+	>>> mlist.append('s')
+	>>> mlist.append(90)
+	>>> mlist.print_sorted()
+	Traceback (most recent call last):
+		...
+	TypeError: '<' not supported between instances of 'str' and 'int'
+
+
+::
+	>>> mlist = MyList()
+	>>> mlist.append(23)
+	>>> mlist.append(2)
+	>>> mlist.append(None)
+	>>> mlist.print_sorted()
+	Traceback (most recent call last):
+		...
+	TypeError: '<' not supported between instances of 'NoneType' and 'int'
