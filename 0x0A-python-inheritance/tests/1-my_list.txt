@@ -53,7 +53,7 @@ Negative Integers
 	[-12, -8, -4, -1]
 
 Floats
-=====
+======
 ::
 	>>> mlist = MyList()
 	>>> mlist.append(0.5)
@@ -137,3 +137,18 @@ A dictionary
 	Traceback (most recent call last):
 		...
 	TypeError: '<' not supported between instances of 'int' and 'dict'
+
+A tuple
+========
+::
+	>>> mlist = MyList()
+	>>> mlist.append((4, 9, 0))
+	>>> mlist.append(-1)
+	>>> mlist.append(0)
+	>>> print(mlist)
+	[(4, 9, 0), -1, 0]
+
+	>>> mlist.print_sorted()
+	Traceback (most recent call last):
+		...
+	TypeError: '<' not supported between instances of 'int' and 'tuple'
