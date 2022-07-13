@@ -93,6 +93,8 @@ Non-numbers
 	TypeError: '<' not supported between instances of 'str' and 'int'
 
 
+None type
+=========
 ::
 	>>> mlist = MyList()
 	>>> mlist.append(23)
@@ -152,3 +154,13 @@ A tuple
 	Traceback (most recent call last):
 		...
 	TypeError: '<' not supported between instances of 'int' and 'tuple'
+
+
+No arguments
+============
+::
+	>>> mlist = MyList()
+	>>> mlist.append()
+	Traceback (most recent call last):
+		...
+	TypeError: append() takes exactly one argument (0 given)
