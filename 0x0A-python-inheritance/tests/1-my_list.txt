@@ -20,6 +20,9 @@ Integer list
 	>>> my_list.append(2)
 	>>> my_list.append(8)
 	>>> my_list.append(5)
+	>>> print(my_list)
+	[4, 2, 8, 5]
+
 	>>> my_list.print_sorted()
 	[2, 4, 5, 8]
 
@@ -31,6 +34,9 @@ Negative Integers
 	>>> my_list.append(-1)
 	>>> my_list.append(-4)
 	>>> my_list.append(-12)
+	>>> print(my_list)
+	[-8, -1, -4, -12]
+	
 	>>> my_list.print_sorted()
 	[-12, -8, -4, -1]
 
@@ -42,6 +48,9 @@ Floats
 	>>> mlist.append(4.4)
 	>>> mlist.append(0.6)
 	>>> mlist.append(3.3)
+	>>> print(mlist)
+	[0.5, 4.4, 0.6, 3.3]
+
 	>>> mlist.print_sorted()
 	[0.5, 0.6, 3.3, 4.4]
 
