@@ -26,6 +26,18 @@ Integer list
 	>>> my_list.print_sorted()
 	[2, 4, 5, 8]
 
+
+	>>> mlist = MyList()
+	>>> mlist.append(4)
+	>>> mlist.append(-2)
+	>>> mlist.append(0)
+	>>> mlist.append(3)
+	>>> print(mlist)
+	[4, -2, 0, 3]
+
+	>>> mlist.print_sorted()
+	[-2, 0, 3, 4]
+
 Negative Integers
 =================
 ::
