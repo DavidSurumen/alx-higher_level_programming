@@ -58,6 +58,9 @@ Empty
 =====
 ::
 	>>> mlist = MyList()
+	>>> print(mlist)
+	[]
+
 	>>> mlist.print_sorted()
 	[]
 
@@ -69,6 +72,9 @@ Non-numbers
 	>>> mlist.append(-1)
 	>>> mlist.append('s')
 	>>> mlist.append(90)
+	>>> print(mlist)
+	[-1, 's', 90]
+
 	>>> mlist.print_sorted()
 	Traceback (most recent call last):
 		...
@@ -80,6 +86,9 @@ Non-numbers
 	>>> mlist.append(23)
 	>>> mlist.append(2)
 	>>> mlist.append(None)
+	>>> print(mlist)
+	[23, 2, None]
+
 	>>> mlist.print_sorted()
 	Traceback (most recent call last):
 		...
@@ -93,6 +102,9 @@ Another list
 	>>> mlist.append([4, 6, 2])
 	>>> mlist.append([5, 0, 1])
 	>>> mlist.append(0)
+	>>> print(mlist)
+	[[4, 6, 2], [5, 0, 1], 0]
+
 	>>> mlist.print_sorted()
 	Traceback (most recent call last):
 		...
@@ -106,6 +118,9 @@ A dictionary
 	>>> mlist.append({2:"value1", 3:"val2"})
 	>>> mlist.append(1)
 	>>> mlist.append(8)
+	>>> print(mlist)
+	[{2: 'value1', 3: 'val2'}, 1, 8]
+
 	>>> mlist.print_sorted()
 	Traceback (most recent call last):
 		...
