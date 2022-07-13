@@ -75,3 +75,29 @@ Non-numbers
 	Traceback (most recent call last):
 		...
 	TypeError: '<' not supported between instances of 'NoneType' and 'int'
+
+
+Another list
+============
+::
+	>>> mlist = MyList()
+	>>> mlist.append([4, 6, 2])
+	>>> mlist.append([5, 0, 1])
+	>>> mlist.append(0)
+	>>> mlist.print_sorted()
+	Traceback (most recent call last):
+		...
+	TypeError: '<' not supported between instances of 'int' and 'list'
+
+
+A dictionary
+============
+::
+	>>> mlist = MyList()
+	>>> mlist.append({2:"value1", 3:"val2"})
+	>>> mlist.append(1)
+	>>> mlist.append(8)
+	>>> mlist.print_sorted()
+	Traceback (most recent call last):
+		...
+	TypeError: '<' not supported between instances of 'int' and 'dict'
