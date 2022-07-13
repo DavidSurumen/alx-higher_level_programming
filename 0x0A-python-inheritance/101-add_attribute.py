@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module '101-add_attribute' contains only 
+"""Module '101-add_attribute' contains only
 one function.
 """
 
