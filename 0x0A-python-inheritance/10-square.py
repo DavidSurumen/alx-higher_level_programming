@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Module ``10-Square`` contains a single class ``Square``
 which extends the `Rectangle` class in the `9-rectangle` module.
