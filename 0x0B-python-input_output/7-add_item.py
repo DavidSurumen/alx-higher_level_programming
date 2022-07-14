@@ -12,12 +12,12 @@ if __name__ == "__main__":
     argv.pop(0)
 
     for elem in argv:
-            args_list.append(elem)
+        args_list.append(elem)
     try:
         deserialized = load_from_json_file("add_item.json")
-        args_list.extend(deserialized)
+        deserialized.extend(args_list)
 
-        save_to_json_file(args_list, "add_item.json")
-    
+        save_to_json_file(deserialized, "add_item.json")
+
     except FileNotFoundError:
         save_to_json_file(args_list, "add_item.json")
