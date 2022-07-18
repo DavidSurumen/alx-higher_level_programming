@@ -41,8 +41,10 @@ class Base:
                 objs_dicts.append(i.to_dictionary())
 
             json_list.append(cls.to_json_string(objs_dicts))
-            filename = "{}.json".format(list_objs[0].__class__.__name__)
+            
+            filename = "{}.json".format(cls.__name__)
 
         with open(filename, 'w', encoding='UTF-8') as f:
             for elem in json_list:
                 f.write(elem)
+
