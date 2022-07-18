@@ -88,6 +88,4 @@ class Rectangle(Base):
                 setattr(self, keys[index], val)
         else:
             for key, val in kwargs.items():
-                for i in keys:
-                    if key == i:
-                        setattr(self, i, val)
+                setattr(self, key, val)
