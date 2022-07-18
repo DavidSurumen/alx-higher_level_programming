@@ -20,6 +20,10 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
+        if type(width) != int:
+            raise TypeError('width must be an integer')
+        elif width <= 0:
+            raise ValueError('width must be > 0')
         self.__width = width
 
     @property
@@ -28,6 +32,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
+        if type(height) != int:
+            raise TypeError('height must be an integer')
+        elif height <= 0:
+            raise ValueError('height must be > 0')
         self.__height = height
 
     @property
@@ -36,6 +44,10 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
+        if type(x) != int:
+            raise TypeError('x must be an integer')
+        elif x < 0:
+            raise ValueError('x must be >= 0')
         self.__x = x
 
     @property
@@ -44,4 +56,40 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
+        if type(y) != int:
+            raise TypeError('y must be an integer')
+        elif y < 0:
+            raise ValueError('y must be >= 0')
         self.__y = y
+
+    def area(self):
+        """returns the area value of the Rectangle instance"""
+        return self.width * self.height
+
+    def display(self):
+        """prints in stdout the Rectangle instance with the
+        character '#'"""
+        for m in range(self.y):
+            print()
+        for m in range(self.height):
+            print(' ' * self.x, end="")
+            print('#' * self.width)
+
+    def __str__(self):
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(
+                self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """assigns an argument to each attribute"""
+
+        for i, val in enumerate(args):
+            if i == 0:
+                self.id = val
+            elif i == 1:
+                self.width = val
+            elif i == 2:
+                self.height = val
+            elif i == 3:
+                self.x = val
+            elif i == 4:
+                self.y = val
