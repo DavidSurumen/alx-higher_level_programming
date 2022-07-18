@@ -38,7 +38,6 @@ class Rectangle(Base):
     def x(self, x):
         self.__x = x
 
-
     @property
     def y(self):
         return self.__y
