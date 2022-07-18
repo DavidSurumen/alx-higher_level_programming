@@ -91,4 +91,3 @@ class Rectangle(Base):
                 for i in keys:
                     if key == i:
                         setattr(self, i, val)
-
