@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains a single class: 'Base'"""
 import json
+import csv
 
 
 class Base:
@@ -78,3 +79,36 @@ class Base:
         dict_list = cls.from_json_string(json_str)
         instances = [cls.create(**instances) for instances in dict_list]
         return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes in CSV."""
+        filename = '{}.csv'.format(cls.__name__)
+        dict_list = [ls.to_dictionary() for ls in list_objs]
+        if len(dict_list) != 0:
+            header = dict_list[0].keys()        
+
+            with open(filename, 'w', encoding='UTF-8') as fp:
+                writer = csv.DictWriter(fp, fieldnames=header)
+                writer.writeheader()
+                for data in dict_list:
+                    writer.writerow(data)
+        else:
+            header = []
+            with open(filename, 'w', encoding='UTF-8') as fp:
+                f.write(header)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes CSV."""
+        filename = '{}.csv'.format(cls.__name__)
+        obj_list = []
+
+        with open(filename, 'r', encoding='UTF-8') as fp:
+            header = fp.readline().replace('\n', '').split(',')
+            for el in fp.readlines():
+                val = map(int, el.replace('\n', '').split(','))
+                data = dict(zip(header, val))
+                obj_list.append(cls.create(**data))
+
+        return obj_list
