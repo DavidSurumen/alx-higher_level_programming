@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Unittests for the 'Base' class."""
 import unittest
-from modules.base import Base
-from modules.rectangle import Rectangle
-from modules.square import Square
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBase(unittest.TestCase):
