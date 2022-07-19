@@ -86,7 +86,7 @@ class Base:
         filename = '{}.csv'.format(cls.__name__)
         dict_list = [ls.to_dictionary() for ls in list_objs]
         if len(dict_list) != 0:
-            header = dict_list[0].keys()        
+            header = dict_list[0].keys()
 
             with open(filename, 'w', encoding='UTF-8') as fp:
                 writer = csv.DictWriter(fp, fieldnames=header)
