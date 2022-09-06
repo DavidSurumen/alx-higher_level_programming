@@ -5,7 +5,7 @@ argv.forEach((val, index) => {
   count++;
 });
 if (count < 3) {
-  console.log('No arguments');
+  console.log('No argument');
 } else if (count === 3) {
   console.log('Argument found');
 } else {
