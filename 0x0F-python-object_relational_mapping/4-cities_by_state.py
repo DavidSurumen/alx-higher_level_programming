@@ -12,7 +12,9 @@ if __name__ == '__main__':
                            db=sys.argv[3])
 
     cur = conn.cursor()
-    cmd = """SELECT * FROM cities
+    cmd = """SELECT cities.id, cities.name, states.name
+            FROM states
+            JOIN cities ON states.id = cities.state_id
             ORDER BY id ASC;"""
 
     cur.execute(cmd)
