@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     obj = session.query(State).first()
 
-    if obj.id is None or obj.name is None:
+    if obj is None or obj.id is None or obj.name is None:
         print("Nothing")
     else:
         print("{:d}: {}".format(obj.id, obj.name))
