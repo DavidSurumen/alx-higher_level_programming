@@ -15,10 +15,10 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    obj = session.query(State).filter(State.name == sys.argv[4])
+    obj = session.query(State.id).filter(State.name == sys.argv[4])
 
-    if obj is None:
+
+    if obj.first() is None:
         print('Not found')
     else:
-        for ob in obj:
-            print('{:d}'.format(ob.id))
+        print(obj.first()[0])
