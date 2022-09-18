@@ -17,7 +17,6 @@ if __name__ == '__main__':
 
     obj = session.query(State.id).filter(State.name == sys.argv[4])
 
-
     if obj.first() is None:
         print('Not found')
     else:
