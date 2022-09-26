@@ -14,7 +14,7 @@ def search(nums, left_index, right_index):
     """Searches nums array recursively using binary search to get
     the peak."""
     if left_index == right_index:
-        return nums[l]
+        return nums[left_index]
     mid = int((left_index + right_index) / 2)
     if nums[mid] > nums[mid + 1]:
         return search(nums, left_index, mid)
