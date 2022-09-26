@@ -9,12 +9,13 @@ def find_peak(list_of_integers):
         return None
     return search(list_of_integers, 0, len(list_of_integers) - 1)
 
-def search(nums, l, r):
+
+def search(nums, left_index, right_index):
     """Searches nums array recursively using binary search to get
     the peak."""
-    if l == r:
+    if left_index == right_index:
         return nums[l]
-    mid = int((l + r) / 2)
+    mid = int((left_index + right_index) / 2)
     if nums[mid] > nums[mid + 1]:
-        return search(nums, l, mid)
-    return search(nums, mid + 1, r)
+        return search(nums, left_index, mid)
+    return search(nums, mid + 1, right_index)
