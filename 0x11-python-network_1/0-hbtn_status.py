@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Fetches https://alx-intranet.hbtn.io/status."""
 
 if __name__ == '__main__':
