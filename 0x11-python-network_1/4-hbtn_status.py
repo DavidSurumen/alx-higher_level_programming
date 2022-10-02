@@ -5,7 +5,7 @@ requests module."""
 if __name__ == '__main__':
     import requests
 
-    url =  'https://alx-intranet.hbtn.io/status'
+    url = 'https://alx-intranet.hbtn.io/status'
     r = requests.get(url)
     res = r.content.decode('utf-8')
 
