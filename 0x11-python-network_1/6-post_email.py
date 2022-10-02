@@ -5,7 +5,7 @@ the email as a parameter, and displays reponse body."""
 if __name__ == '__main__':
     import requests
     import sys
-    
+
     # get url and email
     url = sys.argv[1]
     email = {'email': sys.argv[2]}
