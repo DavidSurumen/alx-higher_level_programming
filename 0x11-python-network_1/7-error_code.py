@@ -12,6 +12,6 @@ if __name__ == "__main__":
     code = r.status_code
 
     if code >= 400:
-        print('Error code: ', code)
+        print('Error code:', code)
     else:
         print(r.content.decode('utf-8'))
