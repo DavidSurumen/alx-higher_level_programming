@@ -10,7 +10,7 @@ from relationship_city import Base
 class State(Base):
     """State model."""
     __tablename__ = 'states'
-    __table_args__ = {'extend_existing': True}
+#    __table_args__ = {'extend_existing': True}
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)

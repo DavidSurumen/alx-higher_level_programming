@@ -11,7 +11,7 @@ Base = declarative_base()
 class City(Base):
     """City definition."""
     __tablename__ = 'cities'
-    __table_args__ = {'extend_existing': True}
+#    __table_args__ = {'extend_existing': True}
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)
